@@ -2,132 +2,730 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- title -->
-  <title>Sourabh Shenoy</title>
-  <!-- website logo(favicon) -->
-  <link rel="icon" type="image/x-icon" href="images/faviconf.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <script src="script.js"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/img/faviconf.png" type="image/x-icon">
+    <!--Unicons-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!--main css file-->
+    <link rel="stylesheet" href="assets/css/style.css">
+<!-- swiper css file -->
+<!--     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Sourabh Shenoy</title>
+<!--     for emailjs file -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("hJ-Jihb1mebwJSMjF"); 
+        })();
+    </script>
 </head>
 
 <body>
-  <!-- <aside class="sidebar" id="sidebar">
-    
-  </aside> -->
-  <!-- header section -->
-  <header>
-    <div class="user">
-      <center><img src="images/Techie.jpg" alt="my pic"></center>
-      <h1 class="name">Sourabh Shenoy</h1>
-      <p class="post">Front End Developer</p>
+    <!-- pre loader -->
+    <div id="preloader">
+        <p style="text-align: center; padding-top: 14rem;">Welcome to my Personal Portoflio! <br> The page is Loading...
+        </p>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-      </ul>
-
-    </nav>
-  </header>
-  <!-- hamburger -->
-  <div id="menu" class="bi bi-grid-fill">
-
-  </div>
-  <!-- hero/home section -->
-
-  <section id="home">
-    <div class="homecontent">
-
-      <h3>Hello!<br> Welcome to my Personal Portfolio!</h3>
-      <h1>I'm Sourabh Shenoy</h1>
-      <h3>and I am <br> <span class="auto_type"></span></h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptas aspernatur, voluptatum, eveniet esse sed
-        earum alias dolorem cupiditate, repellat laudantium placeat provident repellendus accusamus.</p>
-      <br>
-      <a href="resume/My Resume (1).pdf" class="button" download><i class="bi bi-download"></i>Download my
-        Resume</a>
+    <!-- light/dark theme -->
+    <div class="theme-btn flex-center">
+        <i class='bx bxs-sun bx-tada-hover'></i>
+        <i class='bx bxs-moon bx-tada-hover'></i>
     </div>
-    <div class="homeimg">
-      <img src="images/herosec.png" alt="herosec" class="homeimg">
+    <!-- Navigation Bar -->
+    <div class="nav_toggle" id="nav-toggle">
+        <i class='bx bxs-grid-alt'></i>
     </div>
-    </div>
+    <aside class="sidebar" id="sidebar">
+        <nav class="nav">
+            <div class="nav_menu">
+                <div class="menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#home" class="nav_link active-link"><i class='bx bx-home'></i> Home </a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#about" class="nav_link"><i class='bx bx-info-circle'></i> About </a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#skills" class="nav_link"><i class='bx bx-code'></i> Skills</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#education" class="nav_link"> <i class='bx bx-trip'></i> Journey </a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#projects" class="nav_link"> <i class='bx bxl-product-hunt'></i> Projects </a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#contact" class="nav_link"> <i class='bx bxs-contact'></i> Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_share">
+                <a href="#footer"><i class='bx bx-chevrons-down bx-fade-down'
+                        style="color: aqua; font-size: xx-large;"></i></a>
+            </div>
+            <div class="nav_close" id="nav-close">
+                <i class="uil uil-times"></i>
+            </div>
+        </nav>
+    </aside>
+    <!--MAIN PAGE -->
+    <main class="main">
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="home_container container grid">
+                <div class="home_social">
+                    <span class="home_social-follow">
+                        Connect with me:
+                    </span>
+                    <div class="home_social-links">
+                         <a href="https://www.linkedin.com/in/sourabh-shenoy-4b8781232/" target="_blank"
+                            class="home_social-link"><i class='bx bxl-linkedin bx-tada-hover'></i></a>
+                        <a href="https://www.github.com/sourabhshenoy04" target="_blank" class="home_social-link"><i
+                                class='bx bxl-github bx-tada-hover'></i></a>
+                       <a href="mailto:sourabhshenoy04@gmail.com" target="_blank" class="home_social-link"><i
+                                class='bx bxl-gmail bx-tada-hover'></i></a>
+                        <a href="https://wa.me/+919483580154" target="_blank" class="home_social-link"><i
+                                class='bx bxl-whatsapp bx-tada-hover'></i></a>
+                         <a href="https://www.instagram.com/sourabh.shenoy" target="_blank" class="home_social-link"><i
+                                class='bx bxl-instagram bx-tada-hover'></i></a>
+                        <a href="https://www.discord.com" target="_blank" class="home_social-link"><i
+                                class='bx bxl-discord-alt bx-tada-hover'></i></a>
+                    </div>
+                </div>
+                <img src="assets/img/hey__2___1_-removebg-preview - Copy.png" alt="hero/home pic" class="home_img" height="5rem">
+                <div class="home_data">
+                    <h1 class="home_title">Hello! I am <br> Sourabh Shenoy</h1>
+                    <h3 class="home_subtitle ">and I am <span class="auto_type"></span></h3>
+                    <p class="home_description">Welcome to my Personal Portfolio!</p>
+                    <a href="https://drive.google.com/file/d/13_b63BbPPJD3qcI3-PITz3bFYvjIkWxt/view?usp=drive_link" class="button" target = "_blank" ><i
+                            class='bx bxs-download bx-fade-down button_icon'></i>Download my Resume</a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!-- About-->
+        <section class="about section" id="about">
+            <h2 data-heading="A lil' bit" class="section_title">---About Me---</h2>
+            <div class="about_container container grid">
+                <img src="assets/img/about.jpg"
+                    alt="about pic" class="about_img">
+                <div class="about_data">
+                    <p class="about_description" style="text-align:justify;">
+                        ‎‎‎‎‎‎‎‎‎‎‎‎ ‎ ‎ ‎ ‎ ‎ Hello and welcome to my website! I am Sourabh Shenoy, an
+                        18-year-old Engineering student studying at NMAMIT, Nitte. Ever since I was a child, I have been
+                        fascinated by technology, electronic gadgets and computers. I remember being very curious about how
+                        they worked and were developed.<br>‎ ‎ ‎ ‎ ‎ This curiosity led me to research more about it 
+                        on internet, which further fuelled my interest in the field. I
+                        find it incredible how technology is constantly evolving and changing our lives for the better.
+                        I am passionate about pursuing a career in Science and Technology and am excited to contribute
+                        to this industry in the future. I also believe that Technology can change the world.<br>‎‎ ‎ ‎ ‎
+                        ‎ In my free time, I enjoy pencil sketching, which allows me to express my creativity and
+                        relax. I also love watching informative videos on YouTube , watching science fiction movies and learning new things.Additionally,
+                        I have a soft spot for animals and enjoy spending time with them especially cats and dogs. <br>
+                        ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎‎‎‎Thank you for visiting my website and I hope you enjoyed exploring about me!
+                    </p>
+                    <a href="#contact" class="button"> <i class='bx bx-send bx-fade-right'></i> Contact Me</a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!--Skills-->
+        <section class="skills section" id="skills">
+            <h2 data-heading="My" class="section_title">---Abilities---</h2>
+            <div class="skills_container container grid">
+                <div class="skills_tabs">
+                    <div class="skills_header skills_active" data-target="#frontend">
+                        <i class=" bx bx-code skills_icon"></i>
+                        <div>
+                            <h1 class="skills_title">Languages</h1>
+                        </div>
+                        <i class='bx bxs-chevron-down-circle  skills_arrow'></i>
+                    </div>
+                    <div class="skills_header" data-target="#design">
+                        <span class="material-symbols-outlined skills_icon">
+                            construction
+                        </span>
+                        <div>
+                            <h1 class="skills_title">Tools/ Softwares</h1>
+                        </div><i class='bx bxs-chevron-down-circle skills_arrow'></i>
+                    </div>
+                    <div class="skills_header" data-target="#backend">
+                        <i class="uil uil-brackets-curly skills_icon"></i>
+                        <div>
+                            <h1 class="skills_title">Soft Skills</h1>
+                        </div><i class='bx bxs-chevron-down-circle  skills_arrow'></i>
+                    </div>
+                </div>
+<div class="skills_content">
+                    <div class="skills_group skills_active" data-content id="frontend">
+                        <div class="skills_list grid">
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name"> C </h3>
+                                    <span class="skills_number">Basics</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:100%"></span>
+                                </div>
+                            </div>
+                            <!-- <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name"> C++</h3>
+                                    <span class="skills_number"><i class='bx bx-code'></i></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:90%"></span>
+                                </div>
+                            </div> -->
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Python</h3>
+                                    <span class="skills_number">Basics</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:80%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">HTML CSS Javascript</h3>
+                                    <span class="skills_number">Intermediate</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:70%"></span>
+                                </div>
+                            </div>
+<!--                             <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">CSS</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:80%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">JavaScript</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:80%"></span>
+                                </div>
+                            </div> -->
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Verilog/ System Verilog</h3>
+                                    <span class="skills_number">Basics</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:80%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">MATLAB</h3>
+                                    <span class="skills_number">Basics</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:80%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Unix Shell Scripting</h3>
+                                    <span class="skills_number">Intermediate</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:80%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills_group" data-content id="design">
+                        <div class="skills_list grid">
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Microsoft Visual Studio Code</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:90%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">KiCAD (PCB Deisgn)</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:90%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">MATLAB</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:60%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Arduino IDE</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:50%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Linux</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:50%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills_group" data-content id="backend">
+                        <div class="skills_list grid">
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Yet</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:90%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">To</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:90%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Be</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:60%"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Updated</h3>
+                                    <span class="skills_number"></span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage " style="width:50%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!-- Education -->
+        <section class="qualification section" id="education">
+            <h2 data-heading="My" class="section_title">---Journey---</h2>
+            <div class="qualification_container container grid">
+                <div class="education">
+                    <h3 class="qualification_title"><i class='bx bxs-graduation'></i> Education</h3>
+                    <div class="timeline">
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">N.M.A.M Institute of Technology, Nitte, Karkala, Udupi</h3>
+                            <p class="timeline_text"> B.E in Electronics and Communication</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i>2021-2025</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">Sharada P.U College, S.K.D.B Campus, Kodialbail, Mangalore</h3>
+                            <p class="timeline_text">1st and 2nd PUC, Science</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i>2019-2021</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">B.R.M.P.C Public School, Vidyagiri, Bantwal</h3>
+                            <p class="timeline_text">Class 1-10 (CBSE)</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i>2009-2019</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">S.V.S School, Vidyagiri, Bantwal</h3>
+                            <p class="timeline_text">Kindergarten</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i>2007-2009</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <h3 class="qualification_title"><i class='bx bx-briefcase'></i> Work</h3>
+                    <div class="timeline">
+<!--                         <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title"> Company</h3>
+                            <p class="timeline_text"> Position</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> year</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">Company2</h3>
+                            <p class="timeline_text">Position2</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i>year</span>
+                        </div> -->
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">NMAMIT, Nitte</h3>
+                            <p class="timeline_text">Intern (Under Faculty)</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> Feb 2023 - Mar 2023</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title"> Emertxe Information Technologies</h3>
+                            <p class="timeline_text"> Intern </p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> Jun 2022 - Aug 2022 </span>
+<!--                             · 3 mos -->
+                        </div>
+                    </div>
+                </div>
+                <div class="volunteering">
+                    <br>
+                    <h3 class="qualification_title"><i class='bx bx-user'></i> Volunteering</h3>
+                    <div class="timeline">
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title"> Authorcraft Club, Nitte </h3>
+                            <p class="timeline_text"> Club Member</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> 2023-Present</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title"> Electronics Project Club, Nitte </h3>
+                            <p class="timeline_text"> Club Member</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> 2023-Present</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title"> Robotics Club, Nitte </h3>
+                            <p class="timeline_text"> Club Member</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> 2022-2023</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title"> Finite Loop Club, Nitte</h3>
+                            <p class="timeline_text"> Team Lead/ Club Member </p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> 2022-2023</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title"> Art Club</h3>
+                            <p class="timeline_text"> Club Secretary</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> 2018-2019</span>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title"> The Bharath Scouts and Guides</h3>
+                            <p class="timeline_text"> • Patrol Member <br>
+                                • Received Rajyapuraskar Award from honourable Governor of Karnataka, Sri Vajubhai Vala
+                                on 25-06-2019. <br>
+                            •Completed all the exams of Cubs and Scouts from Prathama Sopan till Rajyapuraskar Award. <br>
+                            •Attended many camps.</p>
+                            <span class="timeline_date"><i class='bx bx-calendar'></i> 2010-2019</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+<!--         Projects  -->
+        <section class="project section" id="projects">
+            <h2 data-heading="My" class="section_title">---Projects---</h2>
+            <div class="project_container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="project_content grid swiper-slide">
+                        <img src="assets/img/svpro.jpg"
+                            alt="system_verilog_pro" class="project_img">
+                        <br>
+                        <div class="project_data">
+                            <h3 class="project_title">Mod12Counter using D Flip Flops</h3>
+                            <p class="project_description">This project was undertaken as a part of 4th semester System
+                                Verilog Project. Project details available at my GitHub repository.</p>
+                            <br>
+                            <a href="https://github.com/sourabhshenoy04/synch_mod12_counter" class="dbtn" target="_blank" > View my project <i class='bx bx-window-open bx-fade-up'></i> </a>
+                        </div>
+                    </div>
+                    <div class="project_content grid swiper-slide">
+                        <img src="assets/img/dfmd.png"
+                            alt="diabetic foot monitoring device" class="project_img">
+                        <br>
+                        <div class="project_data">
+                            <h3 class="project_title"> Diabetic Foot Monitoring Device </h3>
+                            <p class="project_description">This project was associated with my internship at NMAMIT, Nitte undertaken with my team mates Snevin and
+                                Tushar which was held between 3rd and 4th semester holidays.
+                                Project details available at my GitHub repository.</p>
+                            <br>
+                            <a href="https://github.com/sourabhshenoy04/diabetic_foot_monitoring_device" class="dbtn" target="_blank"> View my project <i class='bx bx-window-open bx-fade-up'></i> </a>
+                        </div>
+                    </div>
+                    <div class="project_content grid swiper-slide">
+                        <img src="assets/img/ppprev.png"
+                            alt="personal portfolio" class="project_img">
+                        <br>
+                        <div class="project_data">
+                            <h3 class="project_title">Personal Portfolio</h3>
+                            <p class="project_description">This project shows my professional experience, skills and
+                                accomplishments in an organized manner. This project was
+                                undertaken during my 3rd and 4th semesters out of personal interest. Project details
+                                available at my GitHub repository.</p>
+                            <br>
+                            <a href="https://github.com/sourabhshenoy04/personal_portfolio" class="dbtn" target="_blank"> View my project <i class='bx bx-window-open bx-fade-up'></i> </a>
+                        </div>
+                    </div>
+                    <div class="project_content grid swiper-slide">
+                        <img src="assets/img/iot.png"
+                            alt="iot" class="project_img">
+                        <br>
+                        <div class="project_data">
+                            <h3 class="project_title">IoT based Home Automation Solution</h3>
+                            <p class="project_description">This project was associated with internship at Emertxe Information Technolgies Ltd., undertaken  during 2nd semester. Project details available at my GitHub
+                                repository.</p>
+                            <br>
+                            <a href="https://github.com/sourabhshenoy04/iot_based_home_automation_sol" class="dbtn" target="_blank" > View my project <i class='bx bx-window-open bx-fade-up'></i> </a>
+                        </div>
 
-  </section>
-  <br>
-  <hr>
+                       <br><br><br><br> <br> <br> <br>
+                    </div>
+                </div>
+                <div class="swiper-button-next"><i
+                        class='bx bx-chevrons-right bx-fade-right-hover swiper-project-icon'></i></div>
+                <div class="swiper-button-prev"><i
+                        class='bx bx-chevrons-left bx-fade-left-hover swiper-project-icon '></i></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <hr>
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <h2 data-heading="Contact" class="section_title">---Reach me out!---</h2>
+            <div class="contact_container container grid">
+                <div class="contact_content">
+                    <div class="contact_info">
+                        <div class="contact_card">
+                            <i class='bx bx-current-location bx-flashing contact_card-icon'></i>
+                            <h3 class="contact_card-title">Location:</h3>
+                            <span class="contact_card-data">Mangalore</span>
+                            <a href="https://goo.gl/maps/y4Fag5Quix8YVrud9" target="_blank"><span
+                                    class="contact_button">
+                                    Meet me <i class='bx bxs-right-arrow-alt contact_button-icon'></i>
+                                </span></a>
+                        </div>
+                        <div class="contact_card">
+                            <i class='bx bx-phone-call bx-tada contact_card-icon'></i>
+                            <h3 class="contact_card-title">Phone:</h3>
+                            <span class="contact_card-data">+91 9xxxxxxxxx </span>
+                            <a href="tel:+919019809995" target="_blank"><span class="contact_button">
+                                    Call me<i class='bx bxs-right-arrow-alt contact_button-icon'></i>
+                                </span></a>
+                        </div>
+                        <div class="contact_card">
+                            <i class='bx bx-envelope-open bx-tada contact_card-icon'></i>
+                            <h3 class="contact_card-title">Email:</h3>
+                            <span class="contact_card-data">sourabhshenoy04@gmail.com</span>
+                            <a href="mailto:sourabhshenoy04@gmail.com" target="_blank"><span class="contact_button">
+                                    Mail me <i class='bx bxs-right-arrow-alt contact_button-icon'></i>
+                                </span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact_content">
+                    <form class="contact_form">
+                        <div class="input_container">
+                            <input type="text" class="input" id="name" placeholder="Name" name="name" required>
+                        </div>
+                        <div class="input_container">
+                            <input type="email" class="input" id="email" required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" name="email">
+                        </div>
+                        <div class="input_container">
+                            <input type="text" class="input" id="subject" placeholder="Subject" name="subject" required>
+                        </div>
+                        <div class="input_container">
+                            <textarea name="message" id="message" class="input" placeholder="Message"
+                                required></textarea>
+                        </div>
+                       <div class="input_container">
+                            <label for="rating">
+                                <pre>Rate my website out of 5:</pre>
+                            </label> 
+                           <br>
+                            <select id="rating" name="rating" class="rating_dropdown" required>
+                                <option value="" disabled selected>Select a rating</option>
+                                <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733; </option>
+                                <option value="4">&#9733;&#9733;&#9733;&#9733; </option>
+                                <option value="3">&#9733;&#9733;&#9733; </option>
+                                <option value="2">&#9733;&#9733; </option>
+                                <option value="1">&#9733; </option>
+                            </select>
+                        </div>
+                        <button type="button" class="button" onclick="sendMail()"><i
+                                class='bx bx-mail-send bx-tada'></i>Submit</button>
+                        <button type="reset" class="button"><i class='bx bx-reset bx-tada'></i>Reset</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!--===== FOOTER =====-->
+        <footer class="footer" id="footer">
+            <div class="footer_bg">
+                <div class="footer_container container grid">
+                    <p class="footer_copy">
+                        <center>
+                            <p class="footer_copy">
+                                < Made with <i class='bx bx-heart-circle bx-flashing' style="color:tomato"></i>
+                                    by /> <br>
+                                    <span class="myName">
+                                        < Sourabh Shenoy />
+                                    </span>
+                            </p>
+                        </center>
+                    </p>
+                </div>
+        </footer>
+        <a href="#" class="top"><i class='bx bx-up-arrow-alt bx-fade-up' style="color: aqua;"></i></a>
+    <!-- for preloading screen -->    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe> 
+    </main>
+    <hr>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- <script src="assets/js/swiper-bundle.min.js"></script> -->
+    <!-- autotype typed javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var loader = document.getElementById('preloader');
+        window.addEventListener('load', function () {
+            loader.style.display = 'none';
+        })
 
+        // alert
+        // alert("Hello User! Welcome to My Personal Portfolio!");
+        //autotype medium speed
+        var typed = new Typed(".auto_type", {
+            strings: ["an Engineering Student", "a Tech Enthusiast",""],
+            typeSpeed: 80,
+            backSpeed: 100,
+            backDelay: 1500,
+            loop: true
+        })
+        // project section swiper
+        let swiper = new Swiper(".project_container", {
+            cssMode: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // Add autoplay configuration
+            autoplay: {
+                delay: 5000, // Adjust this value as needed
+                disableOnInteraction: false, // Set to true if you want autoplay to pause on user interaction
+            },
 
+        });
+        //for contact form
+        function sendMail() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+            var rating = document.getElementById("rating").value;
+            if (!name || !email || !subject || !message || !rating) {
+                alert("Please fill in all required fields.");
+                return;
+            }
 
+            if (!isValidEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
 
-  <!-- Final footer Section -->
-  <footer>
-    <div class="credit">
+            var params = {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message,
+                rating: rating,
+            };
 
-      < Designed and Developed with 💖 & Passion 👨‍💻 by /> <br>
+            const serviceID = "service_fejk1gg";
+            const templateID = "template_6x6sl4o";
 
-      <b>
-        <span>
-          < Sourabh Shenoy />
-        </span>
-      </b>
-    </div>
+            emailjs.send(serviceID, templateID, params)
+                .then(function (response) {
+                    console.log("Email sent successfully:", response);
+                    alert("Thank you! Message has been sent successfully!");
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("subject").value = "";
+                    document.getElementById("message").value = "";
+                    document.getElementById("rating").value = "";
+                })
+                .catch(function (error) {
+                    console.error("Email send failed:", error);
+                    alert("An error occurred. Message was not sent.");
+                });
+        }
 
-  </footer>
-
-
-
-
-  <section>
-    <a href="#" class="top"><img src="images/goupt.png" height="90px" alt="goup"></a>
-  </section>
-
-
-
-
-  <script src="https://kit.fontawesome.com/5070b76417.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    $(document).ready(function () {
-      $('#menu').onclick(function () {
-        $(this).toggleClass('fa-times')
-        $('header').toggleClass('toggle');
-      });
-    });
-
-    var typed = new Typed(".auto_type", {
-      strings: ["an Engineering Student", "a Tech Enthusiast", "", ""],
-      typespeed: 100,
-      backspeed: 100,
-      backdelay: 1000,
-      loop: true
-    })
-  </script>
-
+        function isValidEmail(email) {
+            var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            return emailPattern.test(email);
+        }
+    </script>
 </body>
-
 </html>
-
-
-
-<!-- home
-about me 
-education
-skills
-projects
-contact me -->
